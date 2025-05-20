@@ -1,0 +1,4 @@
+site_name: Qandle AI Docs
+site_url: https://docs.qandle.ai
+theme:
+  name: material
