@@ -1,6 +1,8 @@
 **/.env
 **/.venv
+**/venv
 **/.DS_Store
 **/.idea
 **/.vscode
 **/.langgraph_api
+**/__pycache__

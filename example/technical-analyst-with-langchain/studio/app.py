@@ -12,7 +12,7 @@ QANDLE_API_URL = os.getenv("QANDLE_API_URL", "https://api.qandle.ai")
 QANDLE_API_KEY = os.getenv("QANDLE_API_KEY")
 
 # Static variable for Ollama configuration
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
 def get_stock_summary(symbol: str) -> str:
     """Retrieve the current action summary for a stock using the Qandle AI API.
