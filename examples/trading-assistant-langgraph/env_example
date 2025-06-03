@@ -1,9 +1,0 @@
-# Ollama Configuration
-# The default is http://localhost:11434 or http://host.docker.internal:11434 with Docker
-OLLAMA_BASE_URL=http://host.docker.internal:11434
-
-# Optional LangSmith settings for tracing
-LANGCHAIN_TRACING_V2=false
-LANGCHAIN_API_KEY=sv2_pt_69585561342748b78ac81a3f0a6a036c_02e2c70964 
-
-LANGSMITH_API_KEY=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

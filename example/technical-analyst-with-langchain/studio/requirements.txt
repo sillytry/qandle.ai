@@ -2,6 +2,4 @@ langgraph
 langchain-core
 langchain-community
 langchain-ollama
-yfinance
-pandas
-python-dotenv 
+
