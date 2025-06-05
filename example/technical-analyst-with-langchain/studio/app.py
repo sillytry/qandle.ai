@@ -36,19 +36,8 @@ def get_stock_summary(symbol: str) -> str:
         data = response.json()
         
         # Extract name, description, and sentiment from each message
-        result_lines = []
-        if "message" in data and isinstance(data["message"], list):
-            for message in data["message"]:
-                name = message.get("name", "")
-                description = message.get("description", "")
-                sentiment = message.get("sentiment", "")
-                
-                # Create formatted line for each message
-                line = f"Name: {name}\nDescription: {description}\nSentiment: {sentiment}"
-                result_lines.append(line)
+        return data["message"] if "message" in data else f"No data available for {symbol}"
         
-        # Join all lines with double newlines for separation
-        return "\n\n".join(result_lines) if result_lines else f"No data available for {symbol}"
         
     except requests.RequestException as e:
         return f"Error fetching data for {symbol}: {str(e)}"
