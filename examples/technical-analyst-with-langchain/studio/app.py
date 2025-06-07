@@ -1,18 +1,18 @@
 from langchain_core.messages import SystemMessage
 from langchain_ollama import ChatOllama
-import requests
-import json
 import os
 
 from langgraph.graph import START, StateGraph, MessagesState
 from langgraph.prebuilt import tools_condition, ToolNode
 
-# Static variables for Qandle AI API configuration
-QANDLE_API_URL = os.getenv("QANDLE_API_URL", "https://api.qandle.ai")
-QANDLE_API_KEY = os.getenv("QANDLE_API_KEY")
+# Import the Qandle AI client
+from qandle_ai import QandleClient
 
 # Static variable for Ollama configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
+# Initialize Qandle AI client
+qandle_client = QandleClient()
 
 def get_stock_summary(symbol: str) -> str:
     """Retrieve the current action summary for a stock using the Qandle AI API.
@@ -20,31 +20,7 @@ def get_stock_summary(symbol: str) -> str:
     Args:
         symbol (str): The stock symbol for which to obtain the current action summary.
     """
-    if not QANDLE_API_KEY:
-        return f"Error: QANDLE_API_KEY environment variable is not set"
-    
-    try:
-        # Make API call to Qandle AI
-        url = f"{QANDLE_API_URL}/asset?symbol={symbol}"
-        headers = {
-            "x-api-key": QANDLE_API_KEY
-        }
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-        
-        # Parse JSON response
-        data = response.json()
-        
-        # Extract name, description, and sentiment from each message
-        return data["message"] if "message" in data else f"No data available for {symbol}"
-        
-        
-    except requests.RequestException as e:
-        return f"Error fetching data for {symbol}: {str(e)}"
-    except json.JSONDecodeError as e:
-        return f"Error parsing response for {symbol}: {str(e)}"
-    except Exception as e:
-        return f"Unexpected error for {symbol}: {str(e)}"
+    return qandle_client.get(symbol)
 
 tools = [get_stock_summary]
 
@@ -74,5 +50,3 @@ builder.add_edge("tools", "assistant")
 
 # Compile graph
 graph = builder.compile()
-
-#graph.get_graph().draw_mermaid_png(output_file_path="technical_analyst_graph.png")

@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+recursive-include qandle_ai *.py
