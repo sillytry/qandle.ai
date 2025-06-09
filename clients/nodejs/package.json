@@ -1,0 +1,37 @@
+{
+  "name": "qandle-ai",
+  "version": "0.0.2",
+  "description": "Node.js SDK for Qandle AI API",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qandle",
+    "ai",
+    "llm",
+    "stock",
+    "market",
+    "technical",
+    "fundamental",
+    "analysis",
+    "data",
+    "finance",
+    "api",
+    "sdk"
+  ],
+  "author": "Qandle AI",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sillytry/qandle.ai"
+  },
+  "homepage": "https://qandle.ai",
+  "bugs": {
+    "url": "https://github.com/sillytry/qandle.ai/issues"
+  }
+} 

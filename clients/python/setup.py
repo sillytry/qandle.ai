@@ -11,7 +11,7 @@ setup(
     description="Python SDK for Qandle AI API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/sillytry/doc.qandle.ai",
+    url="https://github.com/sillytry/qandle.ai",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",
