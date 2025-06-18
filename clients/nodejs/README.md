@@ -22,7 +22,7 @@ The client can be configured using environment variables:
 ### Basic Usage
 
 ```javascript
-const QandleClient = require('qandle-ai');
+import { QandleClient } from 'qandle-ai';
 
 // Initialize the client (uses QANDLE_API_KEY environment variable)
 const client = new QandleClient();
@@ -36,7 +36,7 @@ client.get('AAPL').then(summary => {
 ### Custom Configuration
 
 ```javascript
-const QandleClient = require('qandle-ai');
+import { QandleClient } from 'qandle-ai';
 
 // Initialize with custom API key and base URL
 const client = new QandleClient({
@@ -53,7 +53,7 @@ client.get('TSLA').then(summary => {
 ### Using with async/await
 
 ```javascript
-const QandleClient = require('qandle-ai');
+import { QandleClient } from 'qandle-ai';
 
 async function getStockSummary() {
   const client = new QandleClient();

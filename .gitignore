@@ -6,4 +6,7 @@
 **/.vscode
 **/.langgraph_api
 **/__pycache__
+**/node_modules
+**/build
+**/dist
 site/

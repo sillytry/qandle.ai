@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 /**
  * Client for interacting with the Qandle AI API
@@ -47,4 +47,4 @@ class QandleClient {
   }
 }
 
-module.exports = QandleClient; 
+export { QandleClient }; 
