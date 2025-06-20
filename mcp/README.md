@@ -30,7 +30,7 @@ To use this server with Claude Desktop, add the following to your `claude_deskto
   "mcpServers": {
     "qandle-ai": {
       "command": "node",
-      "args": ["/ABSOLUTE/PATH/TO/qandle.ai/mcp/dist/index.js"]
+      "args": ["/ABSOLUTE/PATH/TO/qandle.ai/mcp/build/index.js"]
     }
   }
 }
