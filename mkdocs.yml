@@ -7,15 +7,23 @@ extra_css:
     - overrides/stylesheets/extra.css
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
-    # Palette toggle for dark mode (primary theme to match your design)
     - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
   features:
     - navigation.sections
     - navigation.indexes
     - search.highlight
     - content.code.copy
     - navigation.footer
+    - announce.dismiss
 
 # Navigation structure - All sections will appear in the left sidebar
 nav:
