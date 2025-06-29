@@ -61,7 +61,7 @@ The Qandle AI MCP server provides the following tools and prompts to AI applicat
 
 #### Tools    
 
-- **get-asset-summary**: Retrieve a factual and contextual summary of the latest action for a ccomma-separated list of symbols - read more here XXX
+- **get-asset-summary**: Retrieve a factual and contextual summary of the latest action for a ccomma-separated list of symbols.
 
 
 #### Prompts
