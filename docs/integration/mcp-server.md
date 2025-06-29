@@ -61,10 +61,11 @@ The Qandle AI MCP server provides the following tools and prompts to AI applicat
 
 #### Tools    
 
-- **get-asset-summary**: Retrieve a factual and contextual summary of the latest action for a ccomma-separated list of symbols.
-
+- **get-asset-summary**: Retrieve a factual and contextual summary of the latest action for a comma-separated list of symbols, based on the [/GET Symbol API endpoint](../api/get-symbol.md).
 
 #### Prompts
 
 - **Do-I-own-winners**: A portfolio benchmark comparison prompt that retrieves comprehensive data for both the stocks and their matching industry ETF benchmarks, displays the information side-by-side in a detailed table for comparison whilst providing factual data presentation without analysis, allowing users to evaluate their portfolio holdings against industry benchmarks.
+
+For detailed examples and usage of prompts, see our [Prompts Tutorial](../tutorials/prompts.md).
 
